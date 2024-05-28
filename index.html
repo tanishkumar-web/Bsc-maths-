@@ -66,6 +66,7 @@
     }
   </style>
 </head>
+  
 <body>
   <header>
     <h1>BSC Maths</h1>
@@ -79,7 +80,16 @@
     <!-- Repeat this iframe 19 more times -->
     <a href="https://youtube.com/@istudyonline?si=bfraZrcFJdUeQ0vM" target="_blank"><button class="button">Channel View</button></a>
   </main>
-
+<script>
+  // Listen for the back button press
+  window.addEventListener('popstate', function(event) {
+    if (event.state && event.state.section === 'home') {
+      // If the user navigated back from Telegram, reload the page
+      window.location.href = 'https://bsc-maths.vercel.app/'; // Replace with your website URL
+    }
+  });
+</script>
+  
   <script>
     // Add entry to browser history when leaving home section
     document.getElementById('searchBtn').addEventListener('click', function() {
